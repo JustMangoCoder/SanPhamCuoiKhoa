@@ -9,6 +9,7 @@ body {
   box-sizing: border-box;
   border: rgb(110, 110, 124), 1px, solid;
   display: block;
+  width:fit-content
 }
 #NavBarLayout {
   display: flex;
