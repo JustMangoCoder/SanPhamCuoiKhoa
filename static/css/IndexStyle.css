@@ -1,0 +1,37 @@
+body {
+  font-family: "Nunito";
+  color: white;
+  font-weight: 600;
+}
+#NavBar {
+  background-color: #0f0f11;
+  padding: 10px;
+  box-sizing: border-box;
+  border: rgb(110, 110, 124), 1px, solid;
+  display: block;
+}
+#NavBarLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#NavBar button {
+  background-color: #0f0f11;
+  color: white;
+  padding: 6px 12px 6px 12px;
+  max-width: 150px;
+  font: inherit;
+  
+  border:none;
+  border-radius: 12px;
+  transition: 0.3s;
+  text-align: start;
+  font-size: 16px;
+}
+#NavBar button:hover {
+  background-color: #CCCEAB;
+  transition: 0.3s;
+}
+#NavBar button i{
+  margin-right: 10px;
+}
