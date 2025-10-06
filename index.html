@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
       href="https://fonts.googleapis.com/css?family=Nunito"
       rel="stylesheet"
     />
@@ -27,19 +31,56 @@
           <button><i class="bi bi-compass"></i><span>Browse</span></button>
         </div>
       </div>
-      <div id="MainContent">
-        <div id="MenuBar">
-          <div id="ContentMenuBar">
-            <div id="SearchBar">Search</div>
-            <a>
-              <img src="./static/img/Logo.webp" id="Avatar" />
-            </a>
+      <div id="Body">
+        <div id="MenuPlace">
+          <div id="MenuBar">
+            <button id="HideNavBar"><</button>
+            <div id="ContentMenuBar">
+              <input
+                type="text"
+                placeholder="Search your movie"
+                id="SearchBar"
+              />
+              <a
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-bell"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
+                  />
+                </svg>
+              </a>
+              <a>
+                <img src="./static/img/Logo.webp" id="Avatar" />
+              </a>
+            </div>
+          </div>
+          <div id="Reccommendation">
+            <img src="./static/img/ChainsawMan-RezeArc.jpeg" />
+          </div>
+          <div></div>
+        </div>
+        <div id="MainContent">
+          <div class="headsection">Continue Watching</div>
+          <div class="MovieSelection">
+            <div class="MovieCard">
+              <img src="./static/img/ChainsawMan-RezeArc.jpeg" />
+              <div class="Description">
+                <div>Chainsaw Man</div>
+                <div class="SmallTitle">Reze Movie</div>
+                <div class ="DescriptionBox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, est! Aliquam minima veritatis distinctio, ea quisquam voluptate quidem cum! In reprehenderit ullam aliquid eligendi nostrum obcaecati quidem quisquam veniam maxime.</div>
+                <button class="PickMovie">Watch</button>
+              </div>
+            </div>
           </div>
         </div>
-        <div id="Reccommendation">
-          <img src="./static/img/ChainsawMan-RezeArc.jpeg" />
-        </div>
       </div>
+      <div id="Footer"></div>
     </div>
   </body>
 </html>

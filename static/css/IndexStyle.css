@@ -24,6 +24,7 @@ body {
   font-family: "Nunito";
   color: white;
   font-weight: 600;
+  background-color: #111113;
 }
 #Logo {
   margin: 20px 5px 40px 0;
@@ -51,7 +52,7 @@ body {
 }
 #NavBar .mini-text {
   font-size: 11px;
-  color: #bdbdbd;
+  color: #6c6c6c;
 }
 #NavBar button {
   background-color: #111113;
@@ -71,22 +72,47 @@ body {
 #NavBar button i {
   margin-right: 20px;
 }
-#MainContent {
-  background-color: #111113;
+#HideNavBar {
+  background-color: inherit;
+  border-radius: 5px;
+  border: 2px solid #bdbdbd;
+  padding: 10px 15px 10px 15px;
+  color: #bdbdbd;
+  font: bold;
+  font-size: 20px;
 }
+----------
+/*Body*/
+#Body {
+  font-family: "Montserrat";
+}
+
 #Reccommendation img {
   width: 87vw;
-  height: 27vw;
+  height: 47vh;
   object-fit: cover;
 }
+
 #MenuBar {
-  padding: 20px 40px 20px 40px;
-  height: 4vw;
-}
-#ContentMenuBar {
-  justify-content: flex-end;
+  padding: 30px 40px 30px 40px;
+  max-height: 3vw;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+#ContentMenuBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+}
+.headsection {
+  font-family: "Montserrat";
+  font-size: 20px;
+}
+#MainContent {
+  margin: 35px;
+  font: "Montserrat";
 }
 #ContentMenuBar #Avatar {
   border-radius: 50%;
@@ -95,9 +121,71 @@ body {
   height: 50px;
 }
 #SearchBar {
-  border: solid 2px #bdbdbd;
-  border-radius: 10px 20px 10px 20px;
+  border-color: #bdbdbd;
+  border-radius: 15px 10px 15px 10px;
   text-align: center;
-  padding:10px
+  max-height: 35px;
+  color: #6c6c6c;
+  font-weight: 600;
+  line-height: 100%;
+  background-color: #111113;
+}
+.MovieSelection {
+  display: grid;
+  margin-top: 20px;
+}
+.MovieCard {
+  background-color: #2b2b2e;
+  border-radius: 10px;
+  width: 15vw;
+  height: 25vw;
+  
+}
+.MovieCard img {
+  object-fit: cover;
+  height: 12vw;
+  width: 15vw;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.Description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap:5px;
+  text-align: center;
+  text-transform:uppercase;
+}
+.SmallTitle {
+  color: #6c6c6c;
+  font-size: 12px;
+}
+.DescriptionBox {
+  overflow: scroll;
+  height:5vw;
+  padding:5px;
+  text-transform: none;
+  font-weight: normal;
+}
+/* Hide the scrollbar but keep the scrolling functionality */
+.DescriptionBox::-webkit-scrollbar {
+  display: none;
+}
 
+.DescriptionBox {
+  -ms-overflow-style: none; /* For Internet Explorer 10+ */
+  scrollbar-width: none; /* For Firefox */
+}
+.PickMovie {
+  background-color: #ccceab;
+  padding: 6px 12px 6px 12px;
+  font: inherit;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+  text-align: center;
+  font-size: 16px;
+  align-self: center;
+  margin-top: 5px;
 }
