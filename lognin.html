@@ -3,11 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign In to your account</title>
     <link
       href="https://fonts.googleapis.com/css?family=Nunito"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link rel="stylesheet" href="./static/css/LogInAndSignUp.css" />
   </head>
-  <body></body>
+  <body>
+    <div id="Container">
+      <div>
+        <img id="BackGroundImage" src="/static/img/ChainsawMan-RezeArc.jpeg" />
+      </div>
+      <div id="MainPlace">
+        <div id="MainPlaceLayout">
+          <h1>Welcome Back</h1>
+          <div style="color: #bdbdbd">Sign In to your page</div>
+          <form id="SignInSection">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" />
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" id="password" />
+            <div style="margin-top: 10px; justify-content: space-between; display: flex;">
+              <label style="color: #bdbdbd">
+                <input
+                  type="checkbox"
+                  id="HideAndShow"
+                  onclick="togglePassword()"
+                />
+                Show your password?
+              </label>
+              <a style="color: #bdbdbd" id="ForgotPassword">Forgot Password?</a>
+            </div>
+          </form>
+          <button id="Sign">Sign In</button>
+          <div style="color:#bdbdbd">Dont't have an account? <a id="SignUp">Sign Up</a></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function togglePassword() {
+        const input = document.getElementById("password");
+        const checkbox = document.getElementById("HideAndShow");
+        if (checkbox.checked) {
+          input.type = "text";
+        } else {
+          input.type = "password";
+        }
+      }
+    </script>
+  </body>
 </html>

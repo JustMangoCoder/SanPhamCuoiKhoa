@@ -15,11 +15,13 @@ p {
   padding: 0;
   font-size: 100%;
   box-sizing: border-box;
+
 }
 #nuxt {
   display: flex;
   flex-direction: row;
 }
+
 body {
   font-family: "Nunito";
   color: white;
@@ -66,7 +68,7 @@ body {
   font-size: 16px;
 }
 #NavBar button:hover {
-  background-color: #ccceab;
+  background-color: #266ca9;
   transition: 0.3s;
 }
 #NavBar button i {
@@ -179,7 +181,7 @@ body {
   scrollbar-width: none; /* For Firefox */
 }
 .PickMovie {
-  background-color: #ccceab;
+  background-color: #266ca9;
   padding: 6px 12px 6px 12px;
   font: inherit;
   border: none;
@@ -189,5 +191,6 @@ body {
   text-align: center;
   font-size: 16px;
   align-self: center;
-  margin-top: 5px;
+  margin-top: 10px;
+  text-decoration: none;
 }

@@ -1,0 +1,87 @@
+html,
+body,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  overflow: hidden;
+}
+#Container {
+    margin: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0;
+  justify-content: space-between;
+}
+#BackGroundImage {
+    height:100vh;
+    width:50vw;
+    object-fit: cover;
+}
+#MainPlace {
+    height:100vh;
+    width:50vw;
+    background-color: #111113
+
+}
+#MainPlaceLayout {
+    padding:150px ;
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+h1 {
+    color:white;
+    font-family: "Montserrat";
+    font-size: 32px;
+    margin-bottom: 10px
+}
+#SignInSection {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin:20px 0 20px 0
+}
+input{
+    padding:15px 10px 15px 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: #bdbdbd;
+    color:white
+}
+input :focus{
+    border-color: #00b4d8;
+}
+label{
+    color:white
+}
+#ForgotPassword {
+    text-decoration: underline;
+    cursor:pointer;
+    align-self: flex-end;
+}
+#Sign {
+    background-color: #00b4d8;
+    font-size: 16px;
+    padding:15px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+#SignUp {
+    color:#00b4d8;
+    cursor:pointer;
+    
+}

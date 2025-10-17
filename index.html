@@ -86,7 +86,9 @@
         .then((json) => {
           let Content = document.getElementById("ContinueWatching");
           for (let i = 0; i < json.data.length; i++) {
+            console.log(json.data[i])
             let MovieTitle = json.data[i].title.split(":")
+            let CotentInside =json.data[i].content.split(";");
             Content.innerHTML =
               Content.innerHTML +
               `<div class="MovieCard">
@@ -94,8 +96,8 @@
               <div class="Description">
                 <div>${MovieTitle[0]}</div>
                 <div class="SmallTitle">${MovieTitle[1]}</div>
-                <div class ="DescriptionBox">${json.data[i].content}.</div>
-                <button class="PickMovie">Watch</button>
+                <div class ="DescriptionBox">${CotentInside[0]}.</div>
+                <a class="PickMovie" href="${CotentInside[1]}" target="_blank"">Watch</a>
               </div>
             </div>`;
           }
