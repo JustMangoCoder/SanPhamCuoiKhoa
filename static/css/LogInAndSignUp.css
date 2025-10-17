@@ -79,6 +79,8 @@ label{
     border: none;
     color: white;
     border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
 }
 #SignUp {
     color:#00b4d8;

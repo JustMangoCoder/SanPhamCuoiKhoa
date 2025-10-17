@@ -22,10 +22,10 @@
     <div id="nuxt">
       <div id="NavBar">
         <div id="NavBarLayout">
-          <div id="Logo">
+          <a id="Logo">
             <img src="./static/img/Logo.webp" />
             <span>MasterTape</span>
-          </div>
+          </a>
           <div class="mini-text">New Feed</div>
           <button><i class="bi bi-compass"></i><span>Browse</span></button>
           <button><i class="bi bi-compass"></i><span>Browse</span></button>
@@ -34,7 +34,7 @@
       <div id="Body">
         <div id="MenuPlace">
           <div id="MenuBar">
-            <button id="HideNavBar"><</button>
+            <button id="HideNavBar" oncick="toggleNavBar()"><</button>
             <div id="ContentMenuBar">
               <input
                 type="text"
@@ -66,13 +66,31 @@
           <div></div>
         </div>
         <div id="MainContent">
-          <div class="headsection">Continue Watching</div>
-          <div class="MovieSelection" id="ContinueWatching"></div>
+          <label class="headsection">All movies</label>
+          <div class="MovieSelection" id="AllMovies"></div>
         </div>
       </div>
       <div id="Footer"></div>
     </div>
     <script>
+      // Toggle NavBar function
+      function toggleNavBar() {
+        const navBar = document.getElementById("NavBar");
+        const body = document.getElementById("Body");
+        const hideButton = document.getElementById("HideNavBar");
+
+        if (navBar.style.display === "none") {
+          // Show NavBar (trở về trạng thái ban đầu)
+          navBar.style.display = "block";
+          body.style.width = "80vw";
+          hideButton.textContent = "<";
+        } else {
+          // Hide NavBar
+          navBar.style.display = "none";
+          body.style.width = "100vw";
+          hideButton.textContent = ">";
+        }
+      }
       fetch(
         "https://jsa44.nextgentra.com/api/khoiposts?populate[image][populate]=*",
         {
@@ -84,17 +102,17 @@
       )
         .then((response) => response.json())
         .then((json) => {
-          let Content = document.getElementById("ContinueWatching");
+          let Content = document.getElementById("AllMovies");
           for (let i = 0; i < json.data.length; i++) {
-            console.log(json.data[i])
-            let MovieTitle = json.data[i].title.split(":")
-            let CotentInside =json.data[i].content.split(";");
+            console.log(json.data[i]);
+            let MovieTitle = json.data[i].title.split(":");
+            let CotentInside = json.data[i].content.split(";");
             Content.innerHTML =
               Content.innerHTML +
               `<div class="MovieCard">
-              <img src="${json.data[i].image}"" />
+              <img src="${json.data[i].image.caption}"" />
               <div class="Description">
-                <div>${MovieTitle[0]}</div>
+                <div class="MovieTitle">${MovieTitle[0]}</div>
                 <div class="SmallTitle">${MovieTitle[1]}</div>
                 <div class ="DescriptionBox">${CotentInside[0]}.</div>
                 <a class="PickMovie" href="${CotentInside[1]}" target="_blank"">Watch</a>
